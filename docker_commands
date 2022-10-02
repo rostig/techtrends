@@ -1,0 +1,32 @@
+## Docker commands used to build the application 
+docker build . -t techtrends
+
+## Docker commands used to run the application
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+docker logs 9319cf6db028
+
+
+## Logs from the container running the TechTrends application
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug:2022-10-02 09:35:43,742,  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug:2022-10-02 09:35:43,742,  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:2022-10-02 09:35:55,755, 172.17.0.1 - - [02/Oct/2022 09:35:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-02 09:35:55,819, 172.17.0.1 - - [02/Oct/2022 09:35:55] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-02 09:35:55,853, 172.17.0.1 - - [02/Oct/2022 09:35:55] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:2022-10-02 09:36:00,411, About Us retrieved!
+INFO:werkzeug:2022-10-02 09:36:00,412, 172.17.0.1 - - [02/Oct/2022 09:36:00] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-02 09:36:00,431, 172.17.0.1 - - [02/Oct/2022 09:36:00] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-10-02 09:36:02,008, 172.17.0.1 - - [02/Oct/2022 09:36:02] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-02 09:36:02,021, 172.17.0.1 - - [02/Oct/2022 09:36:02] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-10-02 09:36:04,218, New article was created. Article name: fgdfg
+INFO:werkzeug:2022-10-02 09:36:04,219, 172.17.0.1 - - [02/Oct/2022 09:36:04] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:2022-10-02 09:36:04,222, 172.17.0.1 - - [02/Oct/2022 09:36:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-02 09:36:04,254, 172.17.0.1 - - [02/Oct/2022 09:36:04] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-10-02 09:37:15,615, 172.17.0.1 - - [02/Oct/2022 09:37:15] "GET /metrics HTTP/1.1" 200 -
